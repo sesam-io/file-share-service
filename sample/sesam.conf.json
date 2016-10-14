@@ -1,0 +1,39 @@
+[
+    {
+        "_id": "file-share-system",
+        "type": "system:url",
+        "base_url": "http://192.168.1.88:5000/"
+    },
+    {
+        "_id": "files",
+        "type": "pipe",
+        "source": {
+            "type": "json",
+            "system": "file-share-system",
+            "url": "files"
+        }
+    },
+    {
+        "_id": "metadata-system",
+        "type": "system:url",
+        "base_url": "http://192.168.1.88:8000/"
+    },
+    {
+        "_id": "customers",
+        "type": "pipe",
+        "source": {
+            "type": "json",
+            "system": "metadata-system",
+            "url": "customers.json"
+        }
+    },
+    {
+        "_id": "projects",
+        "type": "pipe",
+        "source": {
+            "type": "json",
+            "system": "metadata-system",
+            "url": "projects.json"
+        }
+    }
+]

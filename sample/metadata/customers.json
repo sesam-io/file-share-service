@@ -1,0 +1,22 @@
+[
+    {
+        "_id": "apple",
+        "name": "Apple Inc.",
+        "ticker": "AAPL"
+    },
+    {
+        "_id": "ibm",
+        "name": "International Business Machines Corporation",
+        "ticker": "IBM"
+    },
+    {
+        "_id": "microsoft",
+        "name": "Microsoft Corporation",
+        "ticker": "MSFT"
+    },
+    {
+        "_id": "samsung",
+        "name": "Samsung Electronics Co., Ltd.",
+        "ticker": "SSNLF"
+    }
+]
