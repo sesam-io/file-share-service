@@ -6,7 +6,7 @@ A Python micro service that exposes the content of a file system directory as a 
 
 ::
 
-  $ python3 service/file-share-service.py -u http://localhost:5000/ sample/projects
+  $ python3 service/file-share-service.py sample/projects
    * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
    * Restarting with stat
    * Debugger is active!
