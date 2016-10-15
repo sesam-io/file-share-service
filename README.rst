@@ -31,6 +31,8 @@ Example
 
 The service listens on port 5000. JSON entities can be retrieved from 'http://localhost:5000/files'.
 
+Get all the files and directories:
+
 ::
 
   $ curl -s 'http://localhost:5000/files' | jq . -S
@@ -286,7 +288,9 @@ The service listens on port 5000. JSON entities can be retrieved from 'http://lo
       "url": "~rhttp://localhost:5000/file/ibm/fox/README.txt"
     }
   ]
-  
+
+Now get only the files and directories modified made after "2016-10-14T18:28:46Z":
+
 ::
 
   $ curl -s 'http://localhost:5000/files?since=2016-10-14T18:28:46Z' | jq . -S
@@ -330,7 +334,14 @@ The service listens on port 5000. JSON entities can be retrieved from 'http://lo
       "url": "~rhttp://localhost:5000/file/ibm/fox/README.txt"
     }
   ]
-  
+
+Download the file "ibm/fox/README.txt":
+
+::
+
+   $ curl -s 'http://localhost:5000/file/ibm/fox/README.txt'
+   Hello, I'm Fox!
+
 Docker
 ------
 
