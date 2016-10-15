@@ -5,4 +5,4 @@ WORKDIR /service
 RUN pip install -r requirements.txt
 EXPOSE 5000/tcp
 ENTRYPOINT ["python"]
-CMD ["file-share-service.py"]
+CMD ["file-share-service.py", "/file-share"]
