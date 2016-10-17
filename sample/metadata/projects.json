@@ -3,54 +3,63 @@
         "_id": "donkey",
         "name": "Donkey",
         "project_code": "1031",
+        "customer_id": "apple",
         "contact": "barbra@example.org"
     },
     {
         "_id": "lizard",
         "name": "Lizard",
         "project_code": "1042",
+        "customer_id": "apple",
         "contact": "jane@example.org"
     },
     {
         "_id": "mooze",
         "name": "Mooze",
         "project_code": "1022",
+        "customer_id": "apple",
         "contact": "yin@example.org"
     },
     {
         "_id": "deer",
         "name": "Deer",
         "project_code": "1043",
+        "customer_id": "ibm",
         "contact": "jose@example.org"
     },
     {
         "_id": "fox",
         "name": "Fox",
         "project_code": "1032",
+        "customer_id": "ibm",
         "contact": "greg@example.org"
     },
     {
         "_id": "rabbit",
         "name": "Rabbit",
         "project_code": "1011",
+        "customer_id": "ibm",
         "contact": "maggie@example.org"
     },
     {
         "_id": "hare",
         "name": "Hare",
         "project_code": "1082",
+        "customer_id": "microsoft",
         "contact": "alves@example.org"
     },
     {
         "_id": "wolf",
         "name": "Wolf",
         "project_code": "1079",
+        "customer_id": "microsoft",
         "contact": "jim@example.org"
     },
     {
         "_id": "turtle",
         "name": "Turtle",
         "project_code": "1063",
+        "customer_id": "samsung",
         "contact": "ellen@example.org"
     }
 ]

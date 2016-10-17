@@ -114,13 +114,13 @@ def get_file(filename):
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(description='Run the file-share service')
+    parser = argparse.ArgumentParser(description='Run the file-share service.')
     
     parser.add_argument('-p', dest='protocol', required=False, default="http",
-        help='The base URL to refer back to the service')
+                        help='the protocol used refer back to the service (default is "http")')
 
     parser.add_argument('directory', nargs='?',
-                        help='The directory to serve')
+                        help='the directory to serve')
     args = parser.parse_args()
 
     directory = args.directory if args.directory else os.getcwd()

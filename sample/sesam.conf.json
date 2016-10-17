@@ -2,7 +2,7 @@
     {
         "_id": "file-share-system",
         "type": "system:url",
-        "base_url": "http://192.168.1.88:5000/"
+        "base_url": "http://10.1.100.125:5000/"
     },
     {
         "_id": "files",
@@ -16,7 +16,7 @@
     {
         "_id": "metadata-system",
         "type": "system:url",
-        "base_url": "http://192.168.1.88:8000/"
+        "base_url": "http://10.1.100.125:8000/"
     },
     {
         "_id": "customers",
@@ -34,6 +34,50 @@
             "type": "json",
             "system": "metadata-system",
             "url": "projects.json"
+        }
+    },
+    {
+        "_id": "project-files",
+        "type": "pipe",
+        "source": {
+            "type": "dataset",
+            "dataset": "projects"
+        },
+        "transform": {
+            "type": "dtl",
+            "rules": {
+                "default": [
+                    ["copy", "*"],
+                    ["merge",
+                     ["apply-hops", "customer", {
+                         "datasets": ["customers c"],
+                         "where": [
+                             ["eq", "_S.customer_id", "c._id"]
+                         ]
+                     }]
+                    ],
+                    ["add", "files",
+                     ["apply-hops", "project-files", {
+                         "datasets": ["files f"],
+                         "where": [
+                             ["eq", ["concat", ["list", "_S.customer_id", "/", "_S._id"]],
+                              ["concat", ["list", ["first", "f.path"], "/", ["nth", 1, "f.path"]]]
+                             ],
+                             ["eq", "f.type", "file"]
+                         ]
+                     }]
+                    ]
+                ],
+                "customer": [
+                    ["rename", "name", "customer_name"],
+                    ["rename", "ticker", "customer_ticker"]
+                ],
+                "project-files": [
+                    ["add", "filename", "_S._id"],
+                    ["add", "url", "_S.url"],
+                    ["add", "bytes", "_S.bytes"]
+                ]
+            }
         }
     }
 ]
