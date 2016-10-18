@@ -2,7 +2,7 @@
     {
         "_id": "file-share-system",
         "type": "system:url",
-        "base_url": "http://10.1.100.125:5000/"
+        "base_url": "http://10.1.100.83:5000/"
     },
     {
         "_id": "files",
@@ -16,7 +16,7 @@
     {
         "_id": "metadata-system",
         "type": "system:url",
-        "base_url": "http://10.1.100.125:8000/"
+        "base_url": "http://10.1.100.83:8000/"
     },
     {
         "_id": "customers",

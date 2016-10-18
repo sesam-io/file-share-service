@@ -23,7 +23,7 @@ Example
 
 ::
 
-  $ python3 service/file-share-service.py sample/projects
+  $ python3 service/file-share-service.py sample/portfolio
    * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
    * Restarting with stat
    * Debugger is active!
@@ -326,4 +326,4 @@ Running:
 
 ::
 
-  $ docker run --name file-share-service --rm -it -p 5000:5000 -v $PWD/sample/projects:/file-share sesam/file-share-service
+  $ docker run --name file-share-service --rm -it -p 5000:5000 -v $PWD/sample/portfolio:/file-share sesam/file-share-service

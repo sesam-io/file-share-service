@@ -70,7 +70,7 @@ class DataAccess:
             "file": os.path.basename(relfile),
             "dir": os.path.dirname(relfile),
             "path": path,
-            "atime": to_transit_datetime(r.st_atime_ns),
+            # "atime": to_transit_datetime(r.st_atime_ns),
             "ctime": to_transit_datetime(r.st_ctime_ns),
             "mtime": to_transit_datetime(r.st_mtime_ns),
             "gid": r.st_gid,
