@@ -4,6 +4,8 @@ File-share microservice
 
 A Python micro service that exposes the content of a file system directory as a stream of JSON. This microservice can be consumed by Sesam.
 
+NOTE: Read the "`Using Sesam to enrich your portfolio data <https://github.com/sesam-io/file-share-service/blob/master/introduction/README.rst>`_" article for an in-depth walkthrough of this service.
+
 ::
 
   $ python3 service/file-share-service.py --help
