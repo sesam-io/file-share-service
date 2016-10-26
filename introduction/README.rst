@@ -323,7 +323,7 @@ Get all the files and directories:
 Get files changed after specific time
 -------------------------------------
 
-We can also get only the files and directories modified after a specific point in time:
+We can also get a list of the files and directories that have been modified after a specific point in time:
 
 ::
 
@@ -393,7 +393,7 @@ This flow diagram shows the overall dataflow that we're targetting:
     :align: center
     :alt: Flow diagram
 
-First we'll start out by reading the ``http://YOUR-IP-HERE:5000/files`` endpoint and write the result into a Sesam dataset called ``files``. Next, we'll import two JSON files that contains extra metadata for customers and projects. These will be imported into the datasets ``customers`` and ``projects``. Finally, we'll combine data from all three datasets into a new dataset called ``project-files``.
+First we'll start out by reading the ``http://YOUR-IP-HERE:5000/files`` endpoint and write the result into a Sesam dataset called ``files``. Next, we'll import two JSON files that contains data about customers and projects. These will be imported into the datasets ``customers`` and ``projects``. Finally, we'll combine data from all three datasets into a new dataset called ``project-files``.
 
 
 Importing the file structure
@@ -453,7 +453,7 @@ Importing extra metadata
     },
     ...
 
-This defines a ``url`` system that points to another microservice that we'll spin next. This microservice will serve two JSON files `customers.json and projects.json <https://github.com/sesam-io/file-share-service/tree/master/sample/metadata>`_ that will get loaded into the ``customers`` and ``projects`` datasets in Sesam.
+This defines a ``url`` system that points to another microservice that we'll spin up next. This microservice will serve two JSON files `customers.json and projects.json <https://github.com/sesam-io/file-share-service/tree/master/sample/metadata>`_ that will get loaded into the ``customers`` and ``projects`` datasets in Sesam.
 
 ::
 
