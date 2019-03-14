@@ -1,4 +1,5 @@
 from flask import Flask, request, Response, send_from_directory
+import cherrypy
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
 import argparse
@@ -133,5 +134,17 @@ if __name__ == '__main__':
     # create data access object
     data_access_layer = DataAccess(directory, args)
 
-    # start web server
-    app.run(debug=True, host='0.0.0.0')
+    cherrypy.tree.graft(app, '/')
+
+    # Set the configuration of the web server to production mode
+    cherrypy.config.update({
+        'environment': 'production',
+        'engine.autoreload_on': False,
+        'log.screen': True,
+        'server.socket_port': 5000,
+        'server.socket_host': '0.0.0.0'
+    })
+
+    # Start the CherryPy WSGI web server
+    cherrypy.engine.start()
+    cherrypy.engine.block()

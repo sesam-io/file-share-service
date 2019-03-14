@@ -26,10 +26,10 @@ Example
 ::
 
   $ python3 service/file-share-service.py sample/portfolio
-   * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-   * Restarting with stat
-   * Debugger is active!
-   * Debugger pin code: 260-787-156
+  [14/Mar/2019:10:32:40] ENGINE Bus STARTING
+  [14/Mar/2019:10:32:40] ENGINE Started monitor thread '_TimeoutMonitor'.
+  [14/Mar/2019:10:32:40] ENGINE Serving on http://0.0.0.0:5000
+  [14/Mar/2019:10:32:40] ENGINE Bus STARTED
 
 The service listens on port 5000. JSON entities can be retrieved from 'http://localhost:5000/files'.
 
